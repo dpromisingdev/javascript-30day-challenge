@@ -1,0 +1,91 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #091921;
+}
+
+.clock {
+    background: url(./resources/clock.png);
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #091921;
+    box-shadow: 0 -15px 15px  rgba(255, 255, 255, 0.05),
+                inset 0 -15px 15px  rgba(255, 255, 255, 0.05),
+                0 15px 15px  rgba(0, 0, 0, 0.03),
+                inset 0 15px 15px  rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock::before {
+    content: '';
+    background-color: #ffffff;
+    height: 4%;
+    width: 4%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-3px);
+}
+
+.clockface {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    transform: translate(-3px); /* Stopping the clock hand from being blinked */
+}
+
+.hour {
+    width: 50%;
+    height: 8px;
+    background: #ff105e;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: -3;
+} 
+
+.minute {
+    width: 50%;
+    height: 5px;
+    background: green;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: -2;
+}
+
+.second {
+    width: 50%;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: -1;
+}
+
+

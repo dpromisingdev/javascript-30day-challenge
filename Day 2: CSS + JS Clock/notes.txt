@@ -1,0 +1,4 @@
+1. Setting width 100 
+% and height 100% of a child element means that the element will take up the total area of its parent. 😎
+
+2. setInterval(function, timeout) method runs a function repeteadly after the time set out. 
