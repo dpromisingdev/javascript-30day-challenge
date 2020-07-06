@@ -1,0 +1,3 @@
+1. document.documentElement returns the element that is the root element of the document. Using this with style.setProperty we are receiving the changed CSS variable values and displaying them. 
+2. this.name gives the name attribute of an input element. this.value gives the value of an input element.
+3. this.dataset gives the data* attribute of an element. 
