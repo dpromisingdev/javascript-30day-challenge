@@ -10,8 +10,8 @@
     <form action="" class="search-form">
         <input type="text" class="search-text" placeholder="City or State">
         <ul class="suggestions">
-            <li>Filter for a city</li>
-            <li>or a state</li>
+            <li></li>
+            <li></li>
         </ul>
   </form>
   <script>
@@ -45,7 +45,7 @@
                 <span class="population"> ${numberWithCommas(place.population)} </span>
             </li>`
     })
-    suggestions.innerHTML = html;
+        suggestions.innerHTML = html;
     }
 
     const searchInput = document.querySelector('.search-text');
